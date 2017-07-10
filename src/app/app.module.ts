@@ -14,10 +14,16 @@ import {
   MdSelectModule, MdSidenavModule, MdSliderModule, MdSlideToggleModule, MdSnackBarModule, MdTabsModule,
   MdTooltipModule, MdToolbarModule
 } from "@angular/material";
+import {JavaComponent} from "./java/java.component";
+import {JavaMainComponent} from "./java/java.main.component";
+import {JavaAnonymousComponent} from "./java/java.anonymous.component";
+import {PrismComponent} from "angular-prism/dist/src/prism.component";
 
 @NgModule({
   declarations: [
-    AppComponent, MainComponent
+    AppComponent, MainComponent,
+    PrismComponent,
+    JavaComponent, JavaMainComponent, JavaAnonymousComponent,
   ],
   imports: [
     BrowserModule,

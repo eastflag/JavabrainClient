@@ -24,6 +24,7 @@
     "@angular/platform-browser": "^4.2.4",
     "@angular/platform-browser-dynamic": "^4.2.4",
     "@angular/router": "^4.2.4",
+    "angular-prism": "^0.1.20",
     "angular2-jwt": "^0.2.3",
     "angulartics2": "^2.2.2",
     "bootstrap": "^3.3.7",
@@ -33,6 +34,7 @@
     "intl": "^1.2.5",
     "ng2-bootstrap": "^1.6.3",
     "ng2-ckeditor": "^1.1.8",
+    "prismjs": "^1.6.0",
     "rxjs": "^5.4.0",
     "web-animations-js": "^2.2.5",
     "zone.js": "^0.8.10"
