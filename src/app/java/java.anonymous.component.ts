@@ -7,8 +7,7 @@ export class JavaAnonymousComponent {
   cssCode: string;
 
   constructor() {
-    this.cssCode = `
-package com.eastflag.anonymous;
+    this.cssCode = `package com.eastflag.anonymous;
 
 import com.eastflag.listener.ClickListener;
 
