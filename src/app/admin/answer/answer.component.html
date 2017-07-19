@@ -1,0 +1,19 @@
+<div class="panel panel-info">
+  <div class="panel-heading">정답관리</div>
+  <div class="panel-body">
+    <form name="answerForm" #answerForm="ngForm" (ngSubmit)="submit(answerForm)">
+      <div fxLayout="row" fxLayoutAlign="center start">
+        <md-input-container>
+          <input mdInput placeholder="문제" name="question" required [(ngModel)]="answerVO.question" #question="ngModel">
+        </md-input-container>
+        <md-input-container>
+          <textarea mdInput placeholder="보기" name="view" [(ngModel)]="answerVO.view" #view="ngModel">
+        </md-input-container>
+        <md-input-container>
+          <textarea mdInput placeholder="답" name="answer" required [(ngModel)]="answerVO.answer" #answer="ngModel"></textarea>
+        </md-input-container>
+        <button md-raised-button color="primary">저장</button>
+      </div>
+    </form>
+  </div>
+</div>
