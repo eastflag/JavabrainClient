@@ -44,11 +44,16 @@ import {CollectionComponent} from "./java/collection/collection.component";
 import {GenericComponent} from "./java/generic/generic.component";
 import {ThreadComponent} from "./java/thread/thread.component";
 import {StreamComponent} from "./java/stream/stream.component";
+import {JavascriptComponent} from "./javascript/javascript.component";
+import {JavascriptMainComponent} from "./javascript/main/javascript.main.component";
+import {ArrayComponent} from "./javascript/array/array.component";
+import {ObjectComponent} from "./javascript/object/object.component";
 
 @NgModule({
     declarations: [
       AppComponent, MainComponent,
       JavaComponent, JavaMainComponent, AnonymousComponent, CollectionComponent, GenericComponent, ThreadComponent, StreamComponent,
+      JavascriptComponent, JavascriptMainComponent, ArrayComponent, ObjectComponent,
     ],
     imports: [
       BrowserModule,

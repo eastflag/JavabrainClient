@@ -1,35 +1,35 @@
 <div fxLayout="column" style="height: 100%;">
-<md-toolbar fxLayout="row" fxLayoutAlign="space-between center" style="min-height:50px;padding: 0 10px;">
-  <div class="brand" routerLink="/main" fxLayout="row" fxLayoutAlign="center center">
-    <img src="/assets/images/brain.png" alt="Java Brain" style="width:25px;height:25px;">
-    <span style="margin-left: 10px;">Java Brain</span>
+  <md-toolbar fxLayout="row" fxLayoutAlign="space-between center" style="min-height:50px;padding: 0 10px;">
+    <div class="brand" routerLink="/main" fxLayout="row" fxLayoutAlign="center center">
+      <img src="/assets/images/brain.png" alt="Java Brain" style="width:25px;height:25px;">
+      <span style="margin-left: 10px;">Java Brain</span>
+    </div>
+    <section id="top_menu" fxLayout="row" fxLayoutAlign="end center">
+      <button md-button routerLinkActive="active" routerLink="/java/main" fxLayout="row" fxLayoutAlign="center center">
+        <md-icon>free_breakfast</md-icon> 자바
+      </button>
+<!--      <button md-button routerLinkActive="active" routerLink="oop.main" fxLayout="row" fxLayoutAlign="center center">
+        <md-icon>device_hub</md-icon> OOP
+      </button>-->
+      <button md-button routerLinkActive="active" routerLink="/javascript/main" fxLayout="row" fxLayoutAlign="center center">
+        <md-icon>description</md-icon>  자바스크립트
+      </button>
+      <button md-button routerLinkActive="active" routerLink="android.main" fxLayout="row" fxLayoutAlign="center center">
+        <md-icon>android</md-icon> 안드로이드
+      </button>
+      <button md-button routerLinkActive="active" routerLink="game.main" fxLayout="row" fxLayoutAlign="center center">
+        <md-icon>gamepad</md-icon> 게임
+      </button>
+    </section>
+  </md-toolbar>
+
+  <div class="content" fxFlex>
+    <router-outlet></router-outlet>
   </div>
-  <section id="top_menu" fxLayout="row" fxLayoutAlign="end center">
-    <button md-button routerLinkActive="active" routerLink="/java" fxLayout="row" fxLayoutAlign="center center">
-      <md-icon>free_breakfast</md-icon> 자바
-    </button>
-    <button md-button routerLinkActive="active" routerLink="oop.main" fxLayout="row" fxLayoutAlign="center center">
-      <md-icon>device_hub</md-icon> OOP
-    </button>
-    <button md-button routerLinkActive="active" routerLink="javascript.main" fxLayout="row" fxLayoutAlign="center center">
-      <md-icon>description</md-icon>  자바스크립트
-    </button>
-    <button md-button routerLinkActive="active" routerLink="android.main" fxLayout="row" fxLayoutAlign="center center">
-      <md-icon>android</md-icon> 안드로이드
-    </button>
-    <button md-button routerLinkActive="active" routerLink="game.main" fxLayout="row" fxLayoutAlign="center center">
-      <md-icon>gamepad</md-icon> 게임
-    </button>
-  </section>
-</md-toolbar>
 
-<div class="content" fxFlex>
-  <router-outlet></router-outlet>
-</div>
-
-<footer class="footer" fxLayout="column" fxLayoutAlign="center center">
-  <p style="margin: 0;">
-    CopyRight 2013 powered by eastflag@gmail.com
-  </p>
-</footer>
+  <footer class="footer" fxLayout="column" fxLayoutAlign="center center">
+    <p style="margin: 0;">
+      CopyRight 2013 powered by eastflag@gmail.com
+    </p>
+  </footer>
 </div>

@@ -24,3 +24,26 @@ svg {
 div.content {
   padding: 1rem;
 }
+
+ul.side-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  li {
+    a {
+      display: block;
+      color: #777;
+      padding: 8px 16px;
+      text-decoration: none;
+    }
+  }
+  li.active {
+    background-color: #e7e7e7;
+  }
+}
+
+.footer {
+  color: #777;
+  border-top: 1px solid #aaaaaa;
+  padding: 5px;
+}
