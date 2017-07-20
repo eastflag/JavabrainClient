@@ -1,0 +1,24 @@
+<div class="panel panel-info">
+  <div class="panel-heading">
+    Thread
+  </div>
+  <div class="panel-body">
+    <h4>* 학습 자료</h4>
+    <dl>
+      <dd><a href="http://blog.naver.com/robinnw/80211544638">참고 사이트1</a></dd>
+    </dl>
+
+    <hr style="margin-bottom: 1em;">
+
+    <h4 style="margin-bottom: 1em;">* hello 문자를 0.3초 간격으로 프린트한다.</h4>
+
+    <div *ngFor="let answer of answerList">
+      <dt><span>{{answer.seq}}. </span>{{answer.question}}</dt>
+      <dd *ngIf="answer.view"><prism-block [code]="answer.view" [language]="'java'"></prism-block></dd>
+      <button type="button" (click)="answer.isShowing=!answer.isShowing">정답보기</button>
+      <dd *ngIf="answer.isShowing"><prism-block [code]="answer.answer" [language]="'java'"></prism-block></dd>
+      <p style="height: 1em;"> </p>
+    </div>
+
+  </div>
+</div>

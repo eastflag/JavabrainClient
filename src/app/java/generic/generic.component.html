@@ -1,0 +1,23 @@
+<div class="panel panel-info">
+  <div class="panel-heading">
+    Generic
+  </div>
+  <div class="panel-body">
+    <h4>* 학습 자료</h4>
+    <dl>
+      <dd><a href="http://opentutorials.org/module/516/6237">참고 사이트1</a></dd>
+      <dd><a href="http://arabiannight.tistory.com/63">참고 사이트2</a></dd>
+    </dl>
+
+    <hr style="margin-bottom: 1em;">
+
+    <div *ngFor="let answer of answerList">
+      <dt><span>{{answer.seq}}. </span>{{answer.question}}</dt>
+      <dd *ngIf="answer.view"><prism-block [code]="answer.view" [language]="'java'"></prism-block></dd>
+      <button type="button" (click)="answer.isShowing=!answer.isShowing">정답보기</button>
+      <dd *ngIf="answer.isShowing"><prism-block [code]="answer.answer" [language]="'java'"></prism-block></dd>
+      <p style="height: 1em;"> </p>
+    </div>
+
+  </div>
+</div>

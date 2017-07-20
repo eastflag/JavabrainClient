@@ -1,0 +1,60 @@
+<div class="panel panel-info">
+  <div class="panel-heading">
+    Collection
+  </div>
+  <div class="panel-body">
+
+    <h4>* 학습 자료</h4>
+    <dl>
+      <dd><a href="http://cafe.naver.com/javachobostudy.cafe">자바강의 -> 필수자바강좌 ->37197번 게시물 참고1</a></dd>
+    </dl>
+
+    <hr style="margin-bottom: 1em;">
+
+    <table width="378" border="1">
+      <tbody>
+      <tr>
+        <td>제목</td>
+        <td>비용</td>
+        <td>저자</td>
+        <td>판매순위</td>
+      </tr>
+      <tr>
+        <td>콩쥐팥쥐</td>
+        <td>20000</td>
+        <td>미상</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>흥부놀부</td>
+        <td>25000</td>
+        <td>미상</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>자바의정석</td>
+        <td>35000</td>
+        <td>정석</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>안드로이드정복</td>
+        <td>15000</td>
+        <td>김상형</td>
+        <td>4</td>
+      </tr>
+      </tbody>
+    </table>
+
+    <p style="height: 1em;"> </p>
+
+    <div *ngFor="let answer of answerList">
+      <dt><span>{{answer.seq}}. </span>{{answer.question}}</dt>
+      <dd *ngIf="answer.view"><prism-block [code]="answer.view" [language]="'java'"></prism-block></dd>
+      <button type="button" (click)="answer.isShowing=!answer.isShowing">정답보기</button>
+      <dd *ngIf="answer.isShowing"><prism-block [code]="answer.answer" [language]="'java'"></prism-block></dd>
+      <p style="height: 1em;"> </p>
+    </div>
+
+  </div>
+</div>
