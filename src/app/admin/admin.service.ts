@@ -37,6 +37,11 @@ export class AdminService {
       .toPromise().then(this.extractData).catch(this.handleError);
   }
 
+  getCategoryTree(parent_id: number): Promise<any> {
+    return this.http.get(this.SERVER + '/api/categoryTree?parent_id=' + parent_id)
+      .toPromise().then(this.extractData).catch(this.handleError);
+  }
+
   private extractData(res: Response) {
     let body = res.json();
     return body || { };

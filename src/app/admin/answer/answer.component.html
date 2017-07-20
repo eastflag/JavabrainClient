@@ -1,19 +1,59 @@
+<div>
+  <p>카테고리 선택</p>
+
+  <tree-root [nodes]="nodes" (activate)="onEvent($event)"></tree-root>
+</div>
+
 <div class="panel panel-info">
-  <div class="panel-heading">정답관리</div>
+  <div class="panel-heading">정답 입력</div>
   <div class="panel-body">
     <form name="answerForm" #answerForm="ngForm" (ngSubmit)="submit(answerForm)">
-      <div fxLayout="row" fxLayoutAlign="center start">
-        <md-input-container>
+      <div fxLayout="column" fxLayoutAlign="center start">
+        <md-input-container class="md-block">
+          <input mdInput placeholder="번호" name="seq" required [(ngModel)]="answerVO.seq" #question="ngModel">
+        </md-input-container>
+        <md-input-container class="md-block">
           <input mdInput placeholder="문제" name="question" required [(ngModel)]="answerVO.question" #question="ngModel">
         </md-input-container>
-        <md-input-container>
-          <textarea mdInput placeholder="보기" name="view" [(ngModel)]="answerVO.view" #view="ngModel">
+        <md-input-container class="md-block">
+          <textarea mdInput placeholder="보기" name="view" rows="5" [(ngModel)]="answerVO.view" #view="ngModel"></textarea>
         </md-input-container>
-        <md-input-container>
-          <textarea mdInput placeholder="답" name="answer" required [(ngModel)]="answerVO.answer" #answer="ngModel"></textarea>
+        <md-input-container class="md-block">
+          <textarea mdInput placeholder="답" name="answer" rows="5" required [(ngModel)]="answerVO.answer" #answer="ngModel"></textarea>
         </md-input-container>
         <button md-raised-button color="primary">저장</button>
       </div>
     </form>
   </div>
+</div>
+
+<div *ngFor="let answer of answerList">
+  <button md-raised-button (click)="answer.isEditing=!answer.isEditing">수정하기</button>
+  <div *ngIf="!answer.isEditing">
+    <p>{{answer.seq}}. {{answer.question}}</p>
+    <p>
+      <prism-block [code]="answer.view" [language]="'java'"></prism-block>
+    </p>
+    <p>
+      <prism-block [code]="answer.answer" [language]="'java'"></prism-block>
+    </p>
+  </div>
+  <div *ngIf="answer.isEditing">
+      <div fxLayout="column" fxLayoutAlign="center start">
+        <md-input-container class="md-block">
+          <input mdInput placeholder="번호" name="seq" required [value]="answer.seq" [(ngModel)]="answer.seq" >
+        </md-input-container>
+        <md-input-container class="md-block">
+          <input mdInput placeholder="문제" name="question" required [value]="answer.question" [(ngModel)]="answer.question" >
+        </md-input-container>
+        <md-input-container class="md-block">
+          <textarea mdInput placeholder="보기" name="view" [value]="answer.view" [(ngModel)]="answer.view" ></textarea>
+        </md-input-container>
+        <md-input-container class="md-block">
+          <textarea mdInput placeholder="답" name="answer" required [value]="answer.answer" [(ngModel)]="answer.answer" ></textarea>
+        </md-input-container>
+        <button md-raised-button color="accent" (click)="modifyAnswer(answer)">수정</button>
+      </div>
+  </div>
+  <hr>
 </div>

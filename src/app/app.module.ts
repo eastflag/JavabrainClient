@@ -21,11 +21,11 @@ import {PrismComponent} from "angular-prism/dist/src/prism.component";
 import {AdminComponent} from "./admin/admin.component";
 import {AnswerComponent} from "./admin/answer/answer.component";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {SharedModule} from "./shared/shared.module";
 
 @NgModule({
     declarations: [
       AppComponent, MainComponent,
-      PrismComponent,
       JavaComponent, JavaMainComponent, JavaAnonymousComponent,
     ],
     imports: [
@@ -35,6 +35,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
       HttpModule,
       AppRouting,
       FlexLayoutModule,
+      SharedModule,
       MdButtonModule,
       MdCardModule,
       MdCheckboxModule,

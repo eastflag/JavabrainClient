@@ -7,33 +7,55 @@ import {AnswerVO} from "../../domain/answer.vo";
   styleUrls: ['./answer.component.scss']
 })
 export class AnswerComponent implements OnInit{
+  nodes;
   category_id: number;
   answerVO: AnswerVO;
   answerList;
 
   constructor(private adminService: AdminService) {
-    this.category_id = 4;
     this.answerVO = new AnswerVO();
-    this.answerVO.category_id = 4;
   }
 
   ngOnInit(): void {
-    this.getAnswerList();
+    this.getCategoryTree();
+  }
+
+  getCategoryTree() {
+    this.adminService.getCategoryTree(0)
+      .then(value => {
+        this.nodes = value;
+      })
   }
 
   getAnswerList() {
     this.adminService.getAnswerList(this.category_id)
       .then(value => {
         this.answerList = value;
-        console.log(this.answerList);
       })
   }
 
   submit(answerForm) {
-    this.answerVO.seq = this.answerList.length + 1;
+    this.answerVO.category_id = this.category_id;
     this.adminService.addAnswer(this.answerVO)
       .then(result => {
         this.getAnswerList();
+        // 입력폼 초기화
+        this.answerVO = new AnswerVO();
       })
+  }
+
+  modifyAnswer(answer: AnswerVO) {
+    this.adminService.modifyAnswer(answer)
+      .then(result => {
+        this.getAnswerList();
+      });
+  }
+
+  onEvent(event) {
+    // event.node.data.category_id
+    console.log(event);
+    console.log(event.node.data.category_id);
+    this.category_id = event.node.data.category_id;
+    this.getAnswerList();
   }
 }
