@@ -49,10 +49,12 @@ import {JavascriptMainComponent} from "./javascript/main/javascript.main.compone
 import {ArrayComponent} from "./javascript/array/array.component";
 import {ObjectComponent} from "./javascript/object/object.component";
 import {AnswerViewComponent} from "./shared/answer/answer.view.component";
+import {LoginComponent} from "./auth/login.component";
 
 @NgModule({
     declarations: [
       AppComponent, MainComponent,
+      LoginComponent,
       JavaComponent, JavaMainComponent, AnonymousComponent, CollectionComponent, GenericComponent, ThreadComponent, StreamComponent,
       JavascriptComponent, JavascriptMainComponent, ArrayComponent, ObjectComponent,
       AnswerViewComponent,

@@ -21,6 +21,11 @@ export class AppService {
       .toPromise().then(this.extractData).catch(this.handleError);
   }
 
+  getSocial(site: string): Promise<any> {
+    return this.http.get(this.SERVER + '/api/social?site=' + site)
+      .toPromise().then(this.extractData).catch(this.handleError);
+  }
+
   private extractData(res: Response) {
     let body = res.json();
     return body || { };

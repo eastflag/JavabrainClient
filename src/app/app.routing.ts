@@ -12,10 +12,13 @@ import {JavascriptComponent} from "./javascript/javascript.component";
 import {JavascriptMainComponent} from "./javascript/main/javascript.main.component";
 import {ArrayComponent} from "./javascript/array/array.component";
 import {ObjectComponent} from "./javascript/object/object.component";
+import {LoginComponent} from "./auth/login.component";
 
 const appRoutes: Routes = [
   {path: '', redirectTo: '/main', pathMatch: 'full'},
   {path: 'main', component: MainComponent},
+  {path: 'login', component: LoginComponent},
+
   {path: 'java', component: JavaComponent, children: [
     {path: 'main', component: JavaMainComponent},
     {path: 'anonymous', component: AnonymousComponent},
@@ -24,11 +27,13 @@ const appRoutes: Routes = [
     {path: 'thread', component: ThreadComponent},
     {path: 'stream', component: StreamComponent},
   ]},
+
   {path: 'javascript', component: JavascriptComponent, children: [
     {path: 'main', component: JavascriptMainComponent},
     {path: 'array', component: ArrayComponent},
     {path: 'object', component: ObjectComponent},
   ]},
+
   {path: 'admin', loadChildren: 'app/admin/admin.module#AdminModule'},
 ];
 
