@@ -48,12 +48,14 @@ import {JavascriptComponent} from "./javascript/javascript.component";
 import {JavascriptMainComponent} from "./javascript/main/javascript.main.component";
 import {ArrayComponent} from "./javascript/array/array.component";
 import {ObjectComponent} from "./javascript/object/object.component";
+import {AnswerViewComponent} from "./shared/answer/answer.view.component";
 
 @NgModule({
     declarations: [
       AppComponent, MainComponent,
       JavaComponent, JavaMainComponent, AnonymousComponent, CollectionComponent, GenericComponent, ThreadComponent, StreamComponent,
       JavascriptComponent, JavascriptMainComponent, ArrayComponent, ObjectComponent,
+      AnswerViewComponent,
     ],
     imports: [
       BrowserModule,

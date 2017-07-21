@@ -12,13 +12,7 @@
 
     <h4 style="margin-bottom: 1em;">* hello 문자를 0.3초 간격으로 프린트한다.</h4>
 
-    <div *ngFor="let answer of answerList">
-      <dt><span>{{answer.seq}}. </span>{{answer.question}}</dt>
-      <dd *ngIf="answer.view"><prism-block [code]="answer.view" [language]="'java'"></prism-block></dd>
-      <button type="button" (click)="answer.isShowing=!answer.isShowing">정답보기</button>
-      <dd *ngIf="answer.isShowing"><prism-block [code]="answer.answer" [language]="'java'"></prism-block></dd>
-      <p style="height: 1em;"> </p>
-    </div>
+    <answer-view *ngFor="let answer of answerList" [answer]="answer"></answer-view>
 
   </div>
 </div>

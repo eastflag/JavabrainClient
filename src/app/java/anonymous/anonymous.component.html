@@ -15,13 +15,7 @@
 
     <h5 style="margin-bottom: 1em;">* ClickListener 인터페이스 구현 및 사용하는 방법 4가지</h5>
 
-    <div *ngFor="let answer of answerList">
-      <dt><span>{{answer.seq}}. </span>{{answer.question}}</dt>
-      <dd *ngIf="answer.view"><prism-block [code]="answer.view" [language]="'java'"></prism-block></dd>
-      <button type="button" (click)="answer.isShowing=!answer.isShowing">정답보기</button>
-      <dd *ngIf="answer.isShowing"><prism-block [code]="answer.answer" [language]="'java'"></prism-block></dd>
-      <p style="height: 1em;"> </p>
-    </div>
+    <answer-view *ngFor="let answer of answerList" [answer]="answer"></answer-view>
 
   </div>
 </div>
