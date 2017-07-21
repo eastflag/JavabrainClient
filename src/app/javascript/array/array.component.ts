@@ -8,6 +8,9 @@ export class ArrayComponent implements OnInit {
   category_id = 9;
   answerList;
 
+  pageUrl = "http://www.javabrain.com/javascript/array";
+  pageIdentifier = "javascript.array";
+
   constructor(private appService: AppService) {
 
   }

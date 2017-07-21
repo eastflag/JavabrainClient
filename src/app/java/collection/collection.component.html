@@ -50,5 +50,7 @@
 
     <answer-view *ngFor="let answer of answerList" [answer]="answer"></answer-view>
 
+    <disqus-thread [page-identifier]="pageIdentifier" [page-url]="pageUrl"></disqus-thread>
+
   </div>
 </div>

@@ -8,6 +8,9 @@ export class ThreadComponent implements OnInit {
   category_id = 7;
   answerList;
 
+  pageUrl = "http://www.javabrain.com/java/thread";
+  pageIdentifier = "java.thread";
+
   constructor(private appService: AppService) {
 
   }

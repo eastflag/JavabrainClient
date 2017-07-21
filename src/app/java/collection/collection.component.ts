@@ -8,6 +8,9 @@ export class CollectionComponent implements OnInit {
   category_id = 5;
   answerList;
 
+  pageUrl = "http://www.javabrain.com/java/collection";
+  pageIdentifier = "java.collection";
+
   constructor(private appService: AppService) {
 
   }

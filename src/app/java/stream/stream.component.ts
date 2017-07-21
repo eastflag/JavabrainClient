@@ -8,6 +8,9 @@ export class StreamComponent implements OnInit {
   category_id = 8;
   answerList;
 
+  pageUrl = "http://www.javabrain.com/java/stream";
+  pageIdentifier = "java.stream";
+
   constructor(private appService: AppService) {
 
   }

@@ -50,6 +50,7 @@ import {ArrayComponent} from "./javascript/array/array.component";
 import {ObjectComponent} from "./javascript/object/object.component";
 import {AnswerViewComponent} from "./shared/answer/answer.view.component";
 import {LoginComponent} from "./auth/login.component";
+import {DisqusModule} from "angular2-disqus";
 
 @NgModule({
     declarations: [
@@ -66,6 +67,7 @@ import {LoginComponent} from "./auth/login.component";
       HttpModule,
       AppRouting,
       FlexLayoutModule,
+      DisqusModule,
       SharedModule,
       MdButtonModule,
       MdCardModule,

@@ -8,6 +8,9 @@ export class ObjectComponent implements OnInit {
   category_id = 10;
   answerList;
 
+  pageUrl = "http://www.javabrain.com/javascript/object";
+  pageIdentifier = "javascript.object";
+
   constructor(private appService: AppService) {
 
   }

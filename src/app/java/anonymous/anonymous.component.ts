@@ -8,6 +8,9 @@ export class AnonymousComponent implements OnInit {
   category_id = 4;
   answerList;
 
+  pageUrl = "http://www.javabrain.com/java/anonymous";
+  pageIdentifier = "java.anonymous";
+
   constructor(private appService: AppService) {
 
   }
