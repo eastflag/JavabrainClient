@@ -13,6 +13,7 @@ import {JavascriptMainComponent} from "./javascript/main/javascript.main.compone
 import {ArrayComponent} from "./javascript/array/array.component";
 import {ObjectComponent} from "./javascript/object/object.component";
 import {LoginComponent} from "./auth/login.component";
+import {CoreComponent} from "./javascript/core/core.component";
 
 const appRoutes: Routes = [
   {path: '', redirectTo: '/main', pathMatch: 'full'},
@@ -30,6 +31,7 @@ const appRoutes: Routes = [
 
   {path: 'javascript', component: JavascriptComponent, children: [
     {path: 'main', component: JavascriptMainComponent},
+    {path: 'core', component: CoreComponent},
     {path: 'array', component: ArrayComponent},
     {path: 'object', component: ObjectComponent},
   ]},
