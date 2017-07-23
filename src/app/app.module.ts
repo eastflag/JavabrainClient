@@ -52,13 +52,14 @@ import {AnswerViewComponent} from "./shared/answer/answer.view.component";
 import {LoginComponent} from "./auth/login.component";
 import {DisqusModule} from "angular2-disqus";
 import {CoreComponent} from "./javascript/core/core.component";
+import {DomComponent} from "./javascript/dom/dom.component";
 
 @NgModule({
     declarations: [
       AppComponent, MainComponent,
       LoginComponent,
       JavaComponent, JavaMainComponent, AnonymousComponent, CollectionComponent, GenericComponent, ThreadComponent, StreamComponent,
-      JavascriptComponent, JavascriptMainComponent, CoreComponent, ArrayComponent, ObjectComponent,
+      JavascriptComponent, JavascriptMainComponent, CoreComponent, ArrayComponent, ObjectComponent, DomComponent,
       AnswerViewComponent,
     ],
     imports: [

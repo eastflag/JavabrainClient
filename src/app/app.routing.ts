@@ -14,6 +14,7 @@ import {ArrayComponent} from "./javascript/array/array.component";
 import {ObjectComponent} from "./javascript/object/object.component";
 import {LoginComponent} from "./auth/login.component";
 import {CoreComponent} from "./javascript/core/core.component";
+import {DomComponent} from "./javascript/dom/dom.component";
 
 const appRoutes: Routes = [
   {path: '', redirectTo: '/main', pathMatch: 'full'},
@@ -34,6 +35,7 @@ const appRoutes: Routes = [
     {path: 'core', component: CoreComponent},
     {path: 'array', component: ArrayComponent},
     {path: 'object', component: ObjectComponent},
+    {path: 'dom', component: DomComponent},
   ]},
 
   {path: 'admin', loadChildren: 'app/admin/admin.module#AdminModule'},
