@@ -1,5 +1,8 @@
-<div fxLayout="column" fxLayoutAlign="space-around center" style="height: 100%;">
+<div fxLayout="column" fxLayoutAlign="space-around center" style="height: 80%;">
   <h3>Welcome to </h3>
   <h1>www.javabrain.kr</h1>
   <img src="/assets/images/brain.png" alt="www.javabrain.kr" style="width:10%;"><br>
 </div>
+
+<input mdInput [(ngModel)]="msg">
+<button md-raised-button color="primary" (click)="send()">전송</button>
