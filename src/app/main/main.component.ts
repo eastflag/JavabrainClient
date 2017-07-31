@@ -19,13 +19,13 @@ export class MainComponent {
 
   onConnected() {
     console.log("Connected");
-    this.client.subscribe("test");
+    this.client.subscribe("javabrain");
     this.sendMessage('HelloWorld');
   }
 
   sendMessage(message: string) {
     let packet = new Paho.MQTT.Message(message);
-    packet.destinationName = "test"; // 보낼 topic
+    packet.destinationName = "javabrain"; // 보낼 topic
     this.client.send(packet);
   }
 
