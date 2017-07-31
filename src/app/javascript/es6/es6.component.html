@@ -1,0 +1,18 @@
+<div class="panel panel-info">
+  <div class="panel-heading">
+    Array
+  </div>
+  <div class="panel-body">
+    <h4>* 학습 자료</h4>
+    <dl>
+      <dd><a href="https://babeljs.io/learn-es2015/">BABEL tutorial</a></dd>
+      <dd><a href="https://www.tutorialspoint.com/es6">tutorialspoint</a></dd>
+    </dl>
+    <hr style="margin-bottom: 1em;">
+
+    <answer-view *ngFor="let answer of answerList" [answer]="answer"></answer-view>
+
+    <disqus-thread [page-identifier]="pageIdentifier" [page-url]="pageUrl"></disqus-thread>
+
+  </div>
+</div>

@@ -1,4 +1,4 @@
-<div fxLayout="column" style="height: 100%;">
+<div fxLayout="column">
   <div id="top" fxLayout="row" fxLayoutAlign="space-between center" style="min-height:50px;padding: 0 10px;">
     <div class="brand" routerLink="/main" fxLayout="row" fxLayoutAlign="center center">
       <img src="/assets/images/brain.png" alt="Java Brain" style="width:25px;height:25px;">
@@ -23,13 +23,16 @@
     </section>
   </div>
 
-  <div class="content" fxFlex>
+  <div class="content">
     <router-outlet></router-outlet>
   </div>
 
-  <footer class="footer" fxLayout="column" fxLayoutAlign="center center">
-    <p style="margin: 0;">
-      CopyRight 2013 powered by eastflag@gmail.com
+  <footer class="footer" fxLayout="column" fxLayoutAlign="center center" fxFlex="none">
+    <p style="margin: 0.5rem 0;">
+      CopyRight 2013 powered by eastflag
+    </p>
+    <p style="margin: 0.5rem 0;">
+      email: eastflag@gmail.com
     </p>
   </footer>
 </div>

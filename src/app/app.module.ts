@@ -53,6 +53,8 @@ import {LoginComponent} from "./auth/login.component";
 import {DisqusModule} from "angular2-disqus";
 import {CoreComponent} from "./javascript/core/core.component";
 import {DomComponent} from "./javascript/dom/dom.component";
+import {Es6Component} from "./javascript/es6/es6.component";
+import {TypescriptComponent} from "./javascript/typescript/typescript.component";
 
 @NgModule({
     declarations: [
@@ -60,6 +62,7 @@ import {DomComponent} from "./javascript/dom/dom.component";
       LoginComponent,
       JavaComponent, JavaMainComponent, AnonymousComponent, CollectionComponent, GenericComponent, ThreadComponent, StreamComponent,
       JavascriptComponent, JavascriptMainComponent, CoreComponent, ArrayComponent, ObjectComponent, DomComponent,
+      Es6Component, TypescriptComponent,
       AnswerViewComponent,
     ],
     imports: [

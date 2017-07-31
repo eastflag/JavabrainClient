@@ -15,6 +15,8 @@ import {ObjectComponent} from "./javascript/object/object.component";
 import {LoginComponent} from "./auth/login.component";
 import {CoreComponent} from "./javascript/core/core.component";
 import {DomComponent} from "./javascript/dom/dom.component";
+import {Es6Component} from "./javascript/es6/es6.component";
+import {TypescriptComponent} from "./javascript/typescript/typescript.component";
 
 const appRoutes: Routes = [
   {path: '', redirectTo: '/main', pathMatch: 'full'},
@@ -36,6 +38,8 @@ const appRoutes: Routes = [
     {path: 'array', component: ArrayComponent},
     {path: 'object', component: ObjectComponent},
     {path: 'dom', component: DomComponent},
+    {path: 'es6', component: Es6Component},
+    {path: 'typescript', component: TypescriptComponent},
   ]},
 
   {path: 'admin', loadChildren: 'app/admin/admin.module#AdminModule'},
