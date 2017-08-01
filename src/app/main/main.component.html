@@ -5,17 +5,12 @@
 </div>
 
 
-<md-card style="height: 30%;" style="visibility: hidden;">
+<md-card style="height: 30%;">
   <md-card-content>
-    <div class="chat-conversation-user them">
+    <div *ngFor="let receiveMsg of receiveMsgList" class="chat-conversation-user"
+         [class.them]="receiveMsg['clientID']!==message.clientID" [class.me]="receiveMsg['clientID']===message.clientID">
       <div class="chat-conversation-message">
-        <p>Hey.<span class="chat-date">{{ 1427207139000 | date: 'fullDate' }}</span></p>
-      </div>
-    </div>
-
-    <div class="chat-conversation-user me">
-      <div class="chat-conversation-message">
-        <p>Goodnight!<span class="chat-date">{{ 1428830580000 | date: 'fullDate' }}</span></p>
+        <p>{{receiveMsg.message}}<span class="chat-date">{{getCurrentDate() | date: 'yyyy-MM-dd hh:mm:ss'}}</span></p>
       </div>
     </div>
   </md-card-content>
@@ -23,7 +18,7 @@
   <md-card-actions>
     <div fxLayout="row" layout-align="start center">
       <md-input-container class="mr-1 ml-1" fxFlex>
-        <input mdInput placeholder="Send message" [(ngModel)]="msg">
+        <input mdInput placeholder="Send message" [(ngModel)]="inputMessage">
       </md-input-container>
       <button md-fab color="primary" (click)="send()">
         <md-icon>send</md-icon>
