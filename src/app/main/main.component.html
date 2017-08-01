@@ -6,7 +6,7 @@
 
 
 <md-card style="height: 30%;">
-  <md-card-content>
+  <md-card-content style="height: 400px; overflow-y: auto" #scrollMe>
     <div *ngFor="let receiveMsg of receiveMsgList" class="chat-conversation-user"
          [class.them]="receiveMsg['clientID']!==message.clientID" [class.me]="receiveMsg['clientID']===message.clientID">
       <div class="chat-conversation-message">

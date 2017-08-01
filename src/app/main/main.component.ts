@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, ElementRef, ViewChild} from '@angular/core';
 import {Paho} from "ng2-mqtt/mqttws31";
 import {MessageVO} from "../domain/message.vo";
 
@@ -12,9 +12,11 @@ export class MainComponent {
   inputMessage;
   receiveMsgList: MessageVO[] = []; // 수신된 메시지들
 
+  @ViewChild('scrollMe') private myScrollContainer: ElementRef;
+
   constructor() {
     this.message = new MessageVO();
-    this.message.clientID = location.host;
+    this.message.clientID = new Date().getTime().toString();
     this.message.nickname = "익명";
     this.client = new Paho.MQTT.Client('www.javabrain.kr', 8083, this.message.clientID);
 
@@ -26,7 +28,7 @@ export class MainComponent {
   onConnected() {
     console.log("Connected");
     this.client.subscribe("javabrain");
-    this.sendMessage('connect', 'HelloWorld');
+    this.sendMessage('connect', this.message.nickname +  '님 접속');
   }
 
   sendMessage(protocol: string, message: string) {
@@ -43,6 +45,7 @@ export class MainComponent {
       console.log('Message arrived : ' + message.payloadString);
       let receiveMessage: MessageVO = JSON.parse(message.payloadString);
       this.receiveMsgList.push(receiveMessage);
+      setTimeout(() => this.scrollToBottom(), 200);
     };
   }
 
@@ -59,5 +62,11 @@ export class MainComponent {
 
   getCurrentDate() {
     return new Date();
+  }
+
+  scrollToBottom(): void {
+    // try {
+      this.myScrollContainer.nativeElement.scrollTop = this.myScrollContainer.nativeElement.scrollHeight;
+    // } catch(err) { }
   }
 }

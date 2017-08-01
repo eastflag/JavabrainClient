@@ -79,7 +79,7 @@ button.active {
   width: 0;
   height: 0;
   content: '';
-  border: 5px solid mat-color($background, card);
+  border: 5px solid mat-color($accent);
   border-bottom-color: transparent;
   @include left(-7px);
   @include border-left-color(transparent);
@@ -99,6 +99,12 @@ button.active {
   position: relative;
   background-color: mat-color($accent);
   @include float(right);
+  p {
+    color: white;
+  }
+}
+.chat-conversation-user.them .chat-conversation-message {
+  background-color: mat-color($accent);
   p {
     color: white;
   }
