@@ -18,7 +18,7 @@
   <md-card-actions>
     <div fxLayout="row" layout-align="start center">
       <md-input-container class="mr-1 ml-1" fxFlex>
-        <input mdInput placeholder="Send message" [(ngModel)]="inputMessage">
+        <input mdInput placeholder="Send message" [(ngModel)]="inputMessage" (keydown.enter)="send()">
       </md-input-container>
       <button md-fab color="primary" (click)="send()">
         <md-icon>send</md-icon>
