@@ -17,6 +17,7 @@ import {CoreComponent} from "./javascript/core/core.component";
 import {DomComponent} from "./javascript/dom/dom.component";
 import {Es6Component} from "./javascript/es6/es6.component";
 import {TypescriptComponent} from "./javascript/typescript/typescript.component";
+import {SnsdicComponent} from "./snsdic/snsdic.component";
 
 const appRoutes: Routes = [
   {path: '', redirectTo: '/main', pathMatch: 'full'},
@@ -41,6 +42,8 @@ const appRoutes: Routes = [
     {path: 'es6', component: Es6Component},
     {path: 'typescript', component: TypescriptComponent},
   ]},
+
+  {path: 'snsdic', component: SnsdicComponent},
 
   {path: 'admin', loadChildren: 'app/admin/admin.module#AdminModule'},
 ];

@@ -1,0 +1,8 @@
+<div fxLayout="row" fxLayoutAlign="start center">
+  <md-input-container class="mr-1 ml-1" fxFlex>
+    <input mdInput placeholder="Send message" [(ngModel)]="message" (keydown.enter)="send()">
+  </md-input-container>
+  <button md-fab color="primary" (click)="send()">
+    <md-icon>send</md-icon>
+  </button>
+</div>
