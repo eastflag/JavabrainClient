@@ -23,8 +23,40 @@
     </section>
   </div>
 
-  <div class="content" fxFlex>
+  <div class="content" style="height: 100%;">
     <router-outlet></router-outlet>
+  </div>
+
+  <div class="chat-container">
+    <button md-fab color="warn" class="chat-button"
+            *ngIf="!displayChat" (click)="displayChat=!displayChat">
+      <md-icon>chat</md-icon>
+    </button>
+    <div *ngIf="displayChat">
+      <button md-fab color="warn" (click)="displayChat=!displayChat">
+        <md-icon>close</md-icon>
+      </button>
+      <md-card class="chat-body">
+        <md-card-content style="height: 400px; overflow-y: auto" #scrollMe>
+          <div *ngFor="let receiveMsg of receiveMsgList" class="chat-conversation-user"
+               [class.them]="receiveMsg['clientID']!==message.clientID" [class.me]="receiveMsg['clientID']===message.clientID">
+            <div class="chat-conversation-message">
+              <p>{{receiveMsg.message}}<span class="chat-date">{{getCurrentDate() | date: 'yyyy-MM-dd hh:mm:ss'}}</span></p>
+            </div>
+          </div>
+        </md-card-content>
+        <md-card-actions>
+          <div fxLayout="row" layout-align="start center">
+            <md-input-container class="mr-1 ml-1" fxFlex>
+              <input mdInput placeholder="Send message" [(ngModel)]="inputMessage" (keydown.enter)="send()">
+            </md-input-container>
+            <button md-fab color="primary" (click)="send()">
+              <md-icon>send</md-icon>
+            </button>
+          </div>
+        </md-card-actions>
+      </md-card>
+    </div>
   </div>
 
   <footer class="footer" fxLayout="column" fxLayoutAlign="center center" fxFlex="none">
