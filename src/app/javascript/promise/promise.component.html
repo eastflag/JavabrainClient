@@ -1,0 +1,19 @@
+<div class="panel panel-info">
+  <div class="panel-heading">
+    Object
+  </div>
+  <div class="panel-body">
+    <h4>* 학습 자료</h4>
+    <dl>
+      <dd><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise (MDN)</a></dd>
+      <dd><a href="http://programmingsummaries.tistory.com/325">Promise (감성프로그래밍 블로그)</a></dd>
+      <dd><a href="http://han41858.tistory.com/11">Promise 두가지 사용법(한창현 블로그)</a></dd>
+    </dl>
+    <hr style="margin-bottom: 1em;">
+
+    <answer-view *ngFor="let answer of answerList" [answer]="answer"></answer-view>
+
+    <disqus-thread [page-identifier]="pageIdentifier" [page-url]="pageUrl"></disqus-thread>
+
+  </div>
+</div>

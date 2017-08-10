@@ -56,6 +56,7 @@ import {DomComponent} from "./javascript/dom/dom.component";
 import {Es6Component} from "./javascript/es6/es6.component";
 import {TypescriptComponent} from "./javascript/typescript/typescript.component";
 import {SnsdicComponent} from "./snsdic/snsdic.component";
+import {PromiseComponent} from "./javascript/promise/promise.component";
 
 @NgModule({
     declarations: [
@@ -63,7 +64,7 @@ import {SnsdicComponent} from "./snsdic/snsdic.component";
       LoginComponent,
       JavaComponent, JavaMainComponent, AnonymousComponent, CollectionComponent, GenericComponent, ThreadComponent, StreamComponent,
       JavascriptComponent, JavascriptMainComponent, CoreComponent, ArrayComponent, ObjectComponent, DomComponent,
-      Es6Component, TypescriptComponent,
+      Es6Component, TypescriptComponent, PromiseComponent,
       AnswerViewComponent,
       SnsdicComponent,
     ],

@@ -18,6 +18,7 @@ import {DomComponent} from "./javascript/dom/dom.component";
 import {Es6Component} from "./javascript/es6/es6.component";
 import {TypescriptComponent} from "./javascript/typescript/typescript.component";
 import {SnsdicComponent} from "./snsdic/snsdic.component";
+import {PromiseComponent} from "./javascript/promise/promise.component";
 
 const appRoutes: Routes = [
   {path: '', redirectTo: '/main', pathMatch: 'full'},
@@ -40,6 +41,7 @@ const appRoutes: Routes = [
     {path: 'object', component: ObjectComponent},
     {path: 'dom', component: DomComponent},
     {path: 'es6', component: Es6Component},
+    {path: 'promise', component: PromiseComponent},
     {path: 'typescript', component: TypescriptComponent},
   ]},
 
