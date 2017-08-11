@@ -9,7 +9,10 @@
       "outDir": "dist",
       "assets": [
         "assets",
-        "favicon.ico"
+        "favicon.ico",
+        "naver2fb94236d7ff938d61b963335c3d086a.html",
+        "sitemap.xml",
+        "robots.txt"
       ],
       "index": "index.html",
       "main": "main.ts",
